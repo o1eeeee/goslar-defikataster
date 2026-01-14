@@ -444,8 +444,8 @@ export interface ApiDefiDefi extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    lat: Schema.Attribute.Decimal & Schema.Attribute.Required;
-    lng: Schema.Attribute.Decimal & Schema.Attribute.Required;
+    lat: Schema.Attribute.Float & Schema.Attribute.Required;
+    lng: Schema.Attribute.Float & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::defi.defi'> &
       Schema.Attribute.Private;
